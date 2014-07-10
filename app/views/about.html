@@ -1,1 +1,38 @@
-<p>This is the about view.</p>
+<p ng-control="players">
+	<label>filter: </label>
+	<input ng-model="freeText"/>
+	<table class="table table-striped">
+		<thead>
+			<th></th>
+			<th>Owner</th>
+			<th>Name</th>
+			<th>Day 1</th>
+			<th>Day 2</th>
+			<th>Day 3</th>
+			<th>Round of 16</th>
+			<th>Quarter finals</th>
+			<th>Semi finals</th>
+			<th>Finals</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="player in data |filter:freeText" ng-class="{'danger':!player.Active}">
+				<td>
+					<img style="height:125px" class="img-rounded" src="{{player.Picture}}">
+				</td>
+				<td>
+					{{player.Team}}
+				</td>
+				<td>
+					{{player.PlayerName}}
+				</td>
+				<td>{{player.Day1}}</td>
+				<td>{{player.Day2}}</td>
+				<td>{{player.Day3}}</td>
+				<td>{{player.RoundOf16}}</td>
+				<td>{{player.QuarterFinals}}</td>
+				<td>{{player.SemiFinals}}</td>
+				<td>{{player.Finals}}</td>
+			</tr>
+		</tbody>
+	</table>
+</p>

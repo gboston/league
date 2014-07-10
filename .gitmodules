@@ -1,0 +1,6 @@
+[submodule "dist/league-dist"]
+	path = dist/league-dist
+	url = https://github.com/gboston/league-dist
+[submodule "league-dist"]
+	path = league-dist
+	url = https://github.com/gboston/league-dist
