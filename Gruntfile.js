@@ -18,7 +18,7 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: 'league-dist'
   };
 
   // Define the configuration for all the tasks
@@ -360,7 +360,7 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
-    if (target === 'dist') {
+    if (target === 'league-dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
 
