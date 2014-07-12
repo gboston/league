@@ -8,8 +8,6 @@
  * Controller of the helloworldApp
  */
 angular.module('leagueApp')
-  .controller('MainCtrl', function ($scope,worldCupService) {
-    worldCupService.getRanking().then(function(data){
-      $scope.data = data.Teams;
-    });
-  });
+  .controller('StatsCtrl', ['$scope','worldCupService',function ($scope,wc) {
+    // wc.alert();
+}]);

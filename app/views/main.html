@@ -1,32 +1,33 @@
 <div class="jumbotron">
-  <h1>Ranking</h1>
-  <p class="lead">
-    <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
-    FIFA WORLD CUP 2014 -  THIS IS IT
-  </p>
-  <!-- <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p> -->
+    <h1>Ranking</h1>
+    <p class="lead">
+        <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
+        FIFA WORLD CUP 2014
+    </p>
+    <!-- <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p> -->
 </div>
 
-<div class="row marketing" style="margin:15px">
-  <table class="table table-striped">
-    <thead>
-      <th></th>
-      <th>Name</th>
-      <th>Score</th>
-    </thead>
-    <tbody>
-      <tr ng-repeat="player in data">
-          <td>
-            <img class="img-circle" src="{{player.Picture}}">
-          </td>
-          <td>
-            
-            <h1>{{player.CleanName}}</h1>
-          </td>
-          <td>
-            <h2>{{player.Score}}</h2>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+<div class="row marketing" style="margin: 15px">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Score</th>  
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="player in data">
+                <td>
+                    <img style="width: 60%"class="img-circle" src="{{player.Picture}}">
+                </td>
+                <td>
+                    <h1>{{player.CleanName}}</h1>
+                </td>
+                <td>
+                    <h2>{{player.Score}}</h2>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
